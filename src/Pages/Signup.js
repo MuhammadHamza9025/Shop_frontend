@@ -12,7 +12,7 @@ const Signup = () => {
     const handlesubmit = async () => {
         let alertmsg;
         const info = { UserName, password, email };
-        const fetchdata = await fetch('http://localhost:1000/register', {
+        const fetchdata = await fetch('https://shop-backend-rust.vercel.app/register', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

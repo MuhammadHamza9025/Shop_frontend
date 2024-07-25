@@ -27,7 +27,7 @@ function App() {
   useEffect(() => {
 
     const fetchp = async () => {
-      const fetallp = await fetch('http://localhost:1000/getallproducts')
+      const fetallp = await fetch('https://shop-backend-rust.vercel.app/getallproducts')
       const res = await fetallp.json()
       setitems(res.getallp)
 

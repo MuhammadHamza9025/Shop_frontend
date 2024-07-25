@@ -9,7 +9,7 @@ const Cart = () => {
 
     const handledelete = async (id) => {
 
-        const fetchproduct = await fetch('http://localhost:1000/deletecart', {
+        const fetchproduct = await fetch('https://shop-backend-rust.vercel.app/deletecart', {
             method: 'POST',
             headers: {
 
@@ -24,7 +24,7 @@ const Cart = () => {
 
 
     const emptycart = async () => {
-        const response = await fetch('http://localhost:1000/clear-cart', {
+        const response = await fetch('https://shop-backend-rust.vercel.app/clear-cart', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const Cart = () => {
                 }
 
                 // Make the request to your backend
-                const response = await fetch('http://localhost:1000/stripe-payment', {
+                const response = await fetch('https://shop-backend-rust.vercel.app/stripe-payment', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

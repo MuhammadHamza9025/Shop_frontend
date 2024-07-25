@@ -18,7 +18,7 @@ const Navbar = () => {
 
 
     const handlelogout = async () => {
-        const fetlogin = await fetch('http://localhost:1000/logout', {
+        const fetlogin = await fetch('https://shop-backend-rust.vercel.app/logout', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ const Navbar = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch('http://localhost:1000/user', {
+                const response = await fetch('https://shop-backend-rust.vercel.app/user', {
                     headers: {
                         'Content-Type': 'application/json',
                     },

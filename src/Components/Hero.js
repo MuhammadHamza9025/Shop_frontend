@@ -62,7 +62,7 @@ export default function Hero() {
 
     useEffect(() => {
         const fetchp = async () => {
-            const fetallp = await fetch('http://localhost:1000/getcategories');
+            const fetallp = await fetch('https://shop-backend-rust.vercel.app/getcategories');
             const res = await fetallp.json();
             setcate({ type: 'Ready', payload: res });
 

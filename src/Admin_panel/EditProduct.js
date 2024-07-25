@@ -46,7 +46,7 @@ const EditProduct = ({ setopenedit, items }) => {
             console.log(`${key}: ${value}`);
         }
 
-        const fetchdata = await fetch('http://localhost:1000/updateItems', {
+        const fetchdata = await fetch('https://shop-backend-rust.vercel.app/updateItems', {
             method: 'POST',
             body: formdata,
         }).then((res) => res.json())

@@ -10,7 +10,7 @@ const Users = () => {
 
     useEffect(() => {
         const getalluser = async () => {
-            const response = await fetch('http://localhost:1000/getalluser', {
+            const response = await fetch('https://shop-backend-rust.vercel.app/getalluser', {
 
                 credentials: 'include',
                 headers: {
@@ -31,7 +31,7 @@ const Users = () => {
         window.location.reload()
         const data = { id, options }
 
-        const updateuser = await fetch('http://localhost:1000/updateuser', {
+        const updateuser = await fetch('https://shop-backend-rust.vercel.app/updateuser', {
             method: 'PATCH',
             credentials: 'include',
             headers: {
