@@ -41,7 +41,7 @@ const EditAndAddCommon = () => {
             console.log(`${key}: ${value}`);
         }
 
-        const fetchdata = await fetch('https://shop-backend-rust.vercel.app/upload', {
+        const fetchdata = await fetch('http://localhost:1000/upload', {
             method: 'POST',
             body: formdata
         }).then((res) => res.json()).then((data) => alert(data.message))
@@ -124,7 +124,7 @@ export default EditAndAddCommon
 //         }
 
 //         try {
-//             const response = await fetch('https://shop-backend-rust.vercel.app/upload', {
+//             const response = await fetch('http://localhost:1000/upload', {
 //                 method: 'POST',
 //                 body: formData,
 //             });

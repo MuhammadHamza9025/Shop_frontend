@@ -14,11 +14,12 @@ const Navbar = () => {
     const dispatch = useDispatch()
     const users = useSelector(state => state.customreducer.users)
     const cart = useSelector(state => state.customreducer.cartitems)
+    console.log(users)
 
 
 
     const handlelogout = async () => {
-        const fetlogin = await fetch('https://shop-backend-rust.vercel.app/logout', {
+        const fetlogin = await fetch('http://localhost:1000/logout', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +34,7 @@ const Navbar = () => {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const response = await fetch('https://shop-backend-rust.vercel.app/user', {
+                const response = await fetch('http://localhost:1000/user', {
                     headers: {
                         'Content-Type': 'application/json',
                     },

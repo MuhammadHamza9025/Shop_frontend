@@ -20,7 +20,7 @@ const ProductDetails = () => {
         if (user) {
 
             dispatch(setcarts(id))
-            const fetchproduct = await fetch('https://shop-backend-rust.vercel.app/addtocart', {
+            const fetchproduct = await fetch('http://localhost:1000/addtocart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',

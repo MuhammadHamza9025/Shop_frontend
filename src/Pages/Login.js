@@ -13,7 +13,7 @@ const Login = () => {
     const handlesignin = async () => {
 
         const info = { email, password };
-        const fetlogin = await fetch('https://shop-backend-rust.vercel.app/login', {
+        const fetlogin = await fetch('http://localhost:1000/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
