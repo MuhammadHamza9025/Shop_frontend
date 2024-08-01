@@ -39,7 +39,7 @@ const Login = () => {
 
     return (
 
-        <div className=' bg-gray-100 top-0 left-0 w-[100%] h-[100vh]  z-10 fixed'>
+        <div className=' bg-gray-100 top-0 left-0 w-[100%] h-[100vh]  z-10 fixed p-10'>
 
             <div className="text-center mt-10">
                 <div className="flex items-center justify-center">
