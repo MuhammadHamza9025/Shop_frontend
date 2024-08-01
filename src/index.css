@@ -5,3 +5,11 @@
 .opened {
     @apply absolute flex flex-col top-11 space-y-4 border-b-2 p-1 right-0 min-w-[100vw] z-10 bg-white px-10 py-6;
 }
+
+.custom {
+    @apply flex flex-row
+}
+
+body {
+    @apply bg-[#f1f5f9]
+}

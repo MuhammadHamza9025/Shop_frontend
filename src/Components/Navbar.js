@@ -59,10 +59,10 @@ const Navbar = () => {
 
     return (
         <div className='flex justify-between items-center  z-50 shadow-md p-3 text-sm fixed w-[100%] bg-white'>
-            <div className='ml-4  order-1 md:order-1'>
+            {/* <div className='ml-4  order-1 md:order-1'>
                 <span className='border p-2 rounded-md border-2-purple-500 bg-purple-700 text-white font-semibold '>Hamza's</span>
                 Blog
-            </div>
+            </div> */}
             {/* ////////////////////// */}
             <div className='order-2 '>
                 <div className='border-2 flex p-2 rounded-md active:border-gray-200 hover:border-gray-200'>

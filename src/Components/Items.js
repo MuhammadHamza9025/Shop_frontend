@@ -10,7 +10,7 @@ const Items = ({ _id, title, image, description, category, newprice, oldprice })
     };
     return (
         <React.Fragment key={_id}>
-            <div className='border h-[370px] w-[327px]  my-2' onClick={scrollToTop}>
+            <div className='border h-[370px] w-[327px]  my-2' >
                 <img src={image[0]} alt="" className=' cursor-pointer p-2 hover:transition-transform hover:p-0 bg-gray-100 h-[55%] w-[100%] object-contain border border-b' />
                 <div className='bg-white flex flex-col p-4'>
                     <span className=' text-lg'>{title}</span>
