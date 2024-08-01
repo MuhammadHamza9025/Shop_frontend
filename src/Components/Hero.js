@@ -197,8 +197,8 @@ export default function Hero() {
             <div className="flex gap-3 pt-20 relative  z-20 px-4 h-[100%] max-w-[96%]">
                 {categories.cate.map(e => (
                     <div className="flex flex-col items-center" key={e.category}>
-                        <Link to={`/products?category=${encodeURIComponent(e.category)}`} className="h-[90px] bg-gray-100 w-[90px] rounded-full flex flex-col items-center">
-                            <img src={categories.type === 'Ready' && e.image} alt={e.categories} className="min-h-[100%] w-[100%] p-4 hover:p-3 cursor-pointer bg-gray-100 rounded-full object-contain" />
+                        <Link to={`/products?category=${encodeURIComponent(e.category)}`} className="h-[90px] bg-white w-[90px] rounded-full flex flex-col items-center">
+                            <img src={categories.type === 'Ready' && e.image} alt={e.categories} className="min-h-[100%] w-[100%] p-4 hover:p-3 cursor-pointer bg-gray-200 rounded-full object-contain" />
                             <span>{e.category}</span>
 
                         </Link>
@@ -223,7 +223,9 @@ export default function Hero() {
 
             {/* ..................................... */}
             {/* HOrizontal  */}
+
             <div className="my-10">
+                <h4 className="p-2 text-3xl font-semibold font-sans">All Products</h4>
                 <Slider {...settings3} className="!my-2 flex !gap-2 flex-row !max-w-[98%] p-2 !justify-center !items-center" >
 
                     {
@@ -240,8 +242,8 @@ export default function Hero() {
                                         <span className="font-semibold text-gray-300 italic line-through">{e.oldprice}$</span>
 
                                     </div>
-                                    <Link > <button className='!m-auto  border-none outline-none mt-2 p-1 font-semibold text-white rounded-2xl bg-red-600 w-[110px] sm:w-[140px] '>Add to Cart</button>
-                                    </Link>                                </div>
+                                    <Link to={`/${e.category}/${e._id}`}> <button className='m-auto mt-3  border-none outline-none p-1 font-semibold text-white rounded-2xl bg-red-600 w-[140px]'>Add to Cart</button>
+                                    </Link>                               </div>
                             </div>
                         )
                     }
@@ -249,6 +251,8 @@ export default function Hero() {
                 </Slider>
             </div>
             <div >
+                <h4 className="p-2 text-2xl font-semibold font-sans">Top's Earphones</h4>
+
                 <Slider {...settings3} className="!my-2 flex !gap-2 flex-row !max-w-[98%] p-2 !justify-center !items-center" >
 
                     {
@@ -265,8 +269,8 @@ export default function Hero() {
                                         <span className="font-semibold text-gray-300 italic line-through">{e.oldprice}$</span>
 
                                     </div>
-                                    <Link > <button className='!m-auto  border-none outline-none mt-2 p-1 font-semibold text-white rounded-2xl bg-red-600 w-[110px] sm:w-[140px] '>Add to Cart</button>
-                                    </Link>                                </div>
+                                    <Link to={`/${e.category}/${e._id}`}> <button className='m-auto mt-3  border-none outline-none p-1 font-semibold text-white rounded-2xl bg-red-600 w-[140px]'>Add to Cart</button>
+                                    </Link>                               </div>
                             </div>
                         )
                     }
@@ -279,6 +283,8 @@ export default function Hero() {
             {/* verticle */}
 
             <div className="mt-10" >
+                <h4 className="p-2 text-2xl font-semibold font-sans">Popular's Mobiles</h4>
+
                 <Slider {...settings3} className="!my-2 flex !gap-2 !max-w-[98%] p-2 !justify-center !items-center" >
 
                     {
@@ -292,10 +298,43 @@ export default function Hero() {
             </div >
             {/* ........................ */}
             <div className="mt-10" >
+                <h4 className="p-2 text-2xl font-semibold font-sans">Popular's Cameras</h4>
+
                 <Slider {...settings3} className="!my-2 flex !gap-2 !max-w-[98%] p-2 !justify-center !items-center" >
 
                     {
-                        allproducts.filter(item => item.category == 'Earphones').map(e =>
+                        allproducts.filter(item => item.category == 'Camera').map(e =>
+                            // e.category == 'Mobiles' &&
+                            <Items title={e.title} image={e.image} description={e.description} oldprice={e.oldprice} newprice={e.newprice} _id={e._id} />
+                        )
+                    }
+
+                </Slider>
+
+            </div >
+            {/* ////////////////////////// */}
+            <div className="mt-10" >
+                <h4 className="p-2 text-2xl font-semibold font-sans">Top's Television</h4>
+
+                <Slider {...settings3} className="!my-2 flex !gap-2 !max-w-[98%] p-2 !justify-center !items-center" >
+
+                    {
+                        allproducts.filter(item => item.category == 'Televisions').map(e =>
+                            // e.category == 'Mobiles' &&
+                            <Items title={e.title} image={e.image} description={e.description} oldprice={e.oldprice} newprice={e.newprice} _id={e._id} />
+                        )
+                    }
+
+                </Slider>
+            </div >
+            {/* ////////////////////////// */}
+            <div className="mt-10" >
+                <h4 className="p-2 text-2xl font-semibold font-sans">Popular's Speakers</h4>
+
+                <Slider {...settings3} className="!my-2 flex !gap-2 !max-w-[98%] p-2 !justify-center !items-center" >
+
+                    {
+                        allproducts.filter(item => item.category == 'Speakers').map(e =>
                             // e.category == 'Mobiles' &&
                             <Items title={e.title} image={e.image} description={e.description} oldprice={e.oldprice} newprice={e.newprice} _id={e._id} />
                         )

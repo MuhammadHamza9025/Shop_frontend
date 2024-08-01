@@ -48,12 +48,12 @@ const ProductDetails = () => {
                                 <div className='flex flex-col gap-3 w-[70px] h-[70px]'>
                                     {
                                         e.image.map((imgSrc, imgIndex) => (
-                                            <img key={imgIndex} src={imgSrc} alt={`image-${imgIndex}`} onMouseEnter={() => setindex(imgIndex)} onClick={() => setindex(imgIndex)} className='p-2  bg-gray-100 cursor-pointer w-[100%] h-[100%] object-contain ' />
+                                            <img key={imgIndex} src={imgSrc} alt={`image-${imgIndex}`} onMouseEnter={() => setindex(imgIndex)} onClick={() => setindex(imgIndex)} className='p-2  bg-gray-200 cursor-pointer w-[100%] h-[100%] object-contain ' />
                                         ))
                                     }
                                 </div>
                                 <div className='h-[350px] w-[400px]'>
-                                    <img src={e.image[indexofimage]} alt={`main-image-${index}`} className='w-[100%] h-[100%] bg-gray-100 rounded-md object-center object-contain  p-2 cursor-pointer' />
+                                    <img src={e.image[indexofimage]} alt={`main-image-${index}`} className='w-[100%] h-[100%] bg-gray-200 rounded-md object-center object-contain  p-2 cursor-pointer' />
                                 </div>
 
                                 <div className='py-6 px-3'>
